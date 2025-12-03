@@ -5,11 +5,9 @@ package pokemon;
 public class Pokemon {
     private String nombre;
     private int nivel;
-    private int puntosSalud;
+    protected int puntosSalud;
     private int ataque;
-
-    private enum Tipo {NORMAL, FUEGO, AGUA, PLANTA, SINIESTRO, PSIQUICO}
-
+    public enum Tipo {NORMAL, FUEGO, AGUA, PLANTA, SINIESTRO, PSIQUICO}
     private Tipo tipo;
 
     //CONSTRUCTOR COMPLETO
@@ -83,9 +81,10 @@ public class Pokemon {
 
     //atacar(pokemon), que reste al Pokémon que se pasa como parámetro tantos puntos de salud como ataque tiene el Pokémon atacante
 
-    public void atacar (String nombre) {
-        this.puntosSalud -= this.ataque;
+    public void atacar(Pokemon objetivo) {
+        objetivo.puntosSalud -= this.ataque;
     }
+
 
     //TOSTRING que devuelva “<nombre> (nivel <nivel>)”
 
