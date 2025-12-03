@@ -63,6 +63,5 @@ public class Persona {
     @Override
     public String toString() {
         return this.nombre + " (Edad: " + this.getEdad() + "años" + ")";
-
     }
 }
